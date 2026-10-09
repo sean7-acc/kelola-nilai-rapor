@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1d4ed8">
+<title>Kelola Nilai Rapor</title>
+<meta name="description" content="Aplikasi pengelolaan nilai rapor berbasis PWA, pendukung e-rapor SMK Negeri 2 Kasongan.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kelola Nilai">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-dalam">
+    <a class="merek" href="#/">
+      <img src="icons/icon-192.png" alt="" width="32" height="32">
+      <span class="merek-teks">Kelola Nilai Rapor</span>
+    </a>
+
+    <nav class="nav" id="nav-utama" aria-label="Navigasi utama">
+      <a href="#/" data-rute="beranda">Beranda</a>
+      <a href="#/impor" data-rute="impor">Impor</a>
+      <a href="#/kelas" data-rute="kelas">Kelas &amp; Mapel</a>
+    </nav>
+
+    <div class="topbar-kanan">
+      <span class="lencana lencana-offline" id="lencana-offline" hidden>Offline</span>
+      <span class="lencana lencana-versi" id="lencana-versi"></span>
+      <button class="btn btn-kecil btn-pasang" id="tombol-pasang" hidden>Pasang</button>
+    </div>
+  </div>
+</header>
+
+<main id="app" class="wadah" tabindex="-1">
+  <div class="memuat">Memuat aplikasi…</div>
+</main>
+
+<footer class="kaki">
+  <div class="wadah kaki-dalam">
+    <span>Kelola Nilai Rapor — pendukung e-rapor SMK Negeri 2 Kasongan</span>
+    <span id="kaki-versi"></span>
+  </div>
+</footer>
+
+<div id="area-toast" class="area-toast" aria-live="polite" aria-atomic="true"></div>
+<div id="area-modal" class="area-modal" hidden></div>
+
+<script src="vendor/dexie.min.js"></script>
+<script src="vendor/xlsx.full.min.js"></script>
+<script src="js/db.js"></script>
+<script src="js/parser.js"></script>
+<script src="js/importer.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/nilai.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
